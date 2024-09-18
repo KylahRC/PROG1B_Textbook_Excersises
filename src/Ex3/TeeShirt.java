@@ -5,7 +5,7 @@ public class TeeShirt
     int orderNumber;
     String size;
     String colour;
-    int price;
+    double price;
 
     public int getOrderNumber()
     {
@@ -25,6 +25,18 @@ public class TeeShirt
     public void setSize(String size)
     {
         this.size = size;
+        if(size.equals("XXL"))
+        {
+            price = 22.99;
+        }
+        else if(size.equals("XXXL"))
+        {
+            price = 22.99;
+        }
+        else
+        {
+            price = 19.99;
+        }
     }
 
     public String getColour()
@@ -37,7 +49,7 @@ public class TeeShirt
         this.colour = colour;
     }
 
-    public int getPrice()
+    public double getPrice()
     {
         return price;
     }
